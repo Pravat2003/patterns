@@ -10,11 +10,11 @@ namespace RepositoryPattern.Infrastructure.Repositories
     public interface IRepository<T> 
     {
         T Add(T entity);
-        T AddRange(IEnumerable<T> entities);
+        void AddRange(IEnumerable<T> entities);
         T Update(T entity);
-        T UpdateRange(IEnumerable<T> entities);
+        void UpdateRange(IEnumerable<T> entities);
         T Remove(T entity);
-        T RemoveRange(IEnumerable<T> entities); 
+        void RemoveRange(IEnumerable<T> entities); 
         T Get(int id);
         IEnumerable<T> GetAll();
         IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
